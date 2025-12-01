@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from 'axios';
 import "/src/components/searcProfile.css";
 import { SpinnerCircular } from 'spinners-react';
@@ -21,7 +21,7 @@ function SearchProfile() {
           const response = await axios.get(`https://api.github.com/users/${username}`);
           setUserData(response.data);
       } catch (err) {
-          setError("Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente");
+          setError(err,"Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente");
       } finally {
         setLoading(true); // Mantém o spinner visível
         setTimeout(() => {
