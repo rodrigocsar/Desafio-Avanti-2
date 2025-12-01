@@ -35,7 +35,7 @@ function SearchProfile() {
         <div className="container d-flex flex-column flex-start align-items-center">
             <div className="container-title d-flex flex-column align-items-center justify-content-center">
                 <div className="logo-title d-flex align-items-center flex-start p-4">
-                    <img className="img-github p-2 mb-2" src="public/assets/githubImg.png" alt="#" />
+                    <img className="img-github p-2 mb-2" src="/assets/githubImg.png" alt="#" />
                     <h1>Perfil <strong>GitHub</strong></h1>
                 </div>
                 <form onSubmit={handleSubmit} className="d-flex justify-content-center">
@@ -48,7 +48,7 @@ function SearchProfile() {
                             onChange={(e) => setUsername(e.target.value)}
                         />
                         <button className="btn btn-primary search-button" type="submit" disabled={loading}>
-                            <img src="public/assets/lupa.svg" alt="" />
+                            <img src="/assets/lupa.svg" alt="" />
                         </button>
                     </div>
                 </form>
